@@ -1,0 +1,108 @@
+@Theight: 20px;
+@border: 1px solid #ccc;
+@cellSize: 20px;
+
+.lottery{
+    position: relative;
+    background: #fff;
+    *{
+        box-sizing: border-box;
+    }
+    .head{
+        height: @Theight;
+        display: flex;
+        flex-wrap: nowrap;
+        width: max-content;
+        .first-cloumn{
+            width: 80px;
+            height: @Theight;
+            border-right: @border;
+            border-top: @border;
+            border-left: @border;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e6f7ff;
+        }
+        .t-head{
+            width: @cellSize;
+            height: @Theight;
+            overflow: hidden;
+            border-right: @border;
+            border-top: @border;
+            background: #e6f7ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+    }
+    .number-order{
+        position: relative;
+        .row{
+            display: flex;
+            flex-wrap: nowrap;
+            width: max-content;
+            &:last-child{
+                border-bottom: @border;
+            }
+            .row-t{
+                width: 80px;
+                height: @cellSize;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-right: @border;
+                border-top: @border;
+                border-left: @border;
+                background: #e6f7ff;
+            }
+            .cell{
+                width: @cellSize;
+                height: @cellSize;
+                border-right: @border;
+                border-top: @border;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                font-size: 12px;
+                &.cell-top-line{
+                    border-top: 1px solid #ff2c35;
+                }
+                &.cell-right-line{
+                    border-right: 1px solid #ff2c35;
+                }
+                &.cell-left-line{
+                    border-left: 1px solid #ff2c35;
+                }
+                &.cell-select{
+                    color: #fff;
+                }
+                .number{
+                    width: @cellSize;
+                    height: @cellSize;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #666;
+                    background: transparent;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    .lottery-select{
+        width: @cellSize;
+        height: @cellSize;
+        position: absolute;
+        z-index: 5;
+        background: #1890ff;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 12px;
+    }
+}
